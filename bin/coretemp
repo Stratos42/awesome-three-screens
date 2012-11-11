@@ -1,0 +1,8 @@
+#!/bin/sh
+
+core1=`sensors | grep "Core 0" | cut -d'+' -f 2 | cut -d'C' -f1`
+core2=`sensors | grep "Core 1" | cut -d'+' -f 2 | cut -d'C' -f1`
+core3=`sensors | grep "Core 2" | cut -d'+' -f 2 | cut -d'C' -f1`
+core4=`sensors | grep "Core 3" | cut -d'+' -f 2 | cut -d'C' -f1`
+
+echo $core1 $core2 $core3 $core4

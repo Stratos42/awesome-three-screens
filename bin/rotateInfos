@@ -1,0 +1,10 @@
+#!/bin/sh
+
+sens=`xrandr 2> /dev/null| grep connected | cut -d' ' -f 4`
+
+if [ $sens == "left" ]
+then
+    echo "left"
+else
+    echo "normal"
+fi
